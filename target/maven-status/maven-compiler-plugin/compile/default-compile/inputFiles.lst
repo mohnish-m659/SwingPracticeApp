@@ -1,0 +1,17 @@
+C:\Eclipse Workspaces\ws1\clinicApp\src\main\java\clinicApp\data\PatientService.java
+C:\Eclipse Workspaces\ws1\clinicApp\src\main\java\clinicApp\ui\ClinicMenuBar.java
+C:\Eclipse Workspaces\ws1\clinicApp\src\main\java\clinicApp\ui\IViewEnum.java
+C:\Eclipse Workspaces\ws1\clinicApp\src\main\java\clinicApp\ui\Main.java
+C:\Eclipse Workspaces\ws1\clinicApp\src\main\java\clinicApp\ui\model\Appointment.java
+C:\Eclipse Workspaces\ws1\clinicApp\src\main\java\clinicApp\ui\model\Patient.java
+C:\Eclipse Workspaces\ws1\clinicApp\src\main\java\clinicApp\ui\model\Physician.java
+C:\Eclipse Workspaces\ws1\clinicApp\src\main\java\clinicApp\ui\ViewResolver.java
+C:\Eclipse Workspaces\ws1\clinicApp\src\main\java\clinicApp\ui\views\AddPatientDialogSwt.java
+C:\Eclipse Workspaces\ws1\clinicApp\src\main\java\clinicApp\ui\views\AppointmentTableModel.java
+C:\Eclipse Workspaces\ws1\clinicApp\src\main\java\clinicApp\ui\views\AppointmentView.java
+C:\Eclipse Workspaces\ws1\clinicApp\src\main\java\clinicApp\ui\views\CreatePatientDialog.java
+C:\Eclipse Workspaces\ws1\clinicApp\src\main\java\clinicApp\ui\views\IView.java
+C:\Eclipse Workspaces\ws1\clinicApp\src\main\java\clinicApp\ui\views\PatientTableModel.java
+C:\Eclipse Workspaces\ws1\clinicApp\src\main\java\clinicApp\ui\views\PatientView.java
+C:\Eclipse Workspaces\ws1\clinicApp\src\main\java\clinicApp\ui\views\ScheduleAppointmentDialog.java
+C:\Eclipse Workspaces\ws1\clinicApp\src\main\java\clinicApp\util\HibernateUtil.java

@@ -9,8 +9,20 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.hibernate.annotations.NamedQueries;
+import org.hibernate.annotations.NamedQuery;
+
 @Entity
+@NamedQueries({
+	@NamedQuery(name = Patient.PATIENT_ALL, query = "select p from Patient p"),
+	@NamedQuery(name = Patient.PATIENT_BY_ID, query = "select p from Patient p where p.id = :patient_id"),
+	@NamedQuery(name = Patient.PATIENT_COUNT, query = "select count(*) from Patient")
+})
 public class Patient {
+	
+	public static final String PATIENT_ALL = "getAllPatients";
+	public static final String PATIENT_BY_ID = "getPatientById";
+	public static final String PATIENT_COUNT = "getPatientCount";
 	
 	public enum Gender{
 		MALE, FEMALE, NOT_SELECTED
@@ -21,7 +33,7 @@ public class Patient {
 	int id;
 	String firstName;
 	String lastName;
-	double age;
+	String age;
 	
 	@Enumerated(EnumType.ORDINAL)
 	Gender gender;
@@ -64,11 +76,11 @@ public class Patient {
 		this.id = id;
 	}
 
-	public double getAge() {
+	public String getAge() {
 		return age;
 	}
 
-	public void setAge(double age) {
+	public void setAge(String age) {
 		this.age = age;
 	}
 

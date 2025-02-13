@@ -31,8 +31,7 @@ public class PatientView extends JPanel implements IView{
 	@Override
 	public void refresh() {
 		SwingUtilities.invokeLater(()->{
-			PatientTableModel model = (PatientTableModel) table.getModel();
-			model.refresh();
+			table.setModel(getTableModel());
 		});
 	}
 	

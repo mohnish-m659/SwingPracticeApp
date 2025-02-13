@@ -59,7 +59,7 @@ public class CreatePatientDialog extends JDialog{
 				
 				p.setFirstName(firstName.getText());
 				p.setLastName(lastName.getText());
-				p.setAge((Double) age.getValue());
+				//p.setAge((Double) age.getValue());
 				
 				p.setDateOfBirth(getSelectedDate());
 				if(maleBtn.isSelected()) {

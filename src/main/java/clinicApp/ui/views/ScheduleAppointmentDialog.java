@@ -18,7 +18,6 @@ public class ScheduleAppointmentDialog extends JDialog {
 
 	private JPanel createContent() {
 		
-		
 		return null;
 	}
 	

@@ -41,14 +41,14 @@ public class Main {
 		Patient p = new Patient();
 		p.setFirstName("Mark");
 		p.setLastName("Buck");
-		p.setAge(45);
+		p.setAge("25Y-3M");
 		p.setGender(Gender.MALE);
 		
 		PatientService.getInstance().savePatient(p);
 		
 		p.setFirstName("Joanna");
 		p.setLastName("Wright");
-		p.setAge(34);
+		p.setAge("30Y-7Months");
 		p.setGender(Gender.FEMALE);
 		
 		PatientService.getInstance().savePatient(p);

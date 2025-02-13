@@ -14,9 +14,6 @@ public class PatientService {
 	
 	private static PatientService instance;
 	
-	private static final String getPatientCountQuery = "from Patient";
-	private static final String getPatientById = "select p from Patient p where p.id = :patient_id";
-	
 	private PatientService() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -37,8 +34,7 @@ public class PatientService {
 	}
 	
 	public int getPatientCount() {
-		List<Patient> patients = getAllPatients();
-		return patients.size();
+		return getAllPatients().size();
 	}
 	
 	public Patient getPatientWithId(int id) {
@@ -46,7 +42,7 @@ public class PatientService {
 		Patient patient = null;
 		try(Session session = HibernateUtil.getSessionFactory().openSession()){
 			transaction = session.beginTransaction();
-			Query query = session.createQuery(getPatientById);
+			Query query = session.getNamedQuery(Patient.PATIENT_BY_ID);
 			query.setParameter("patient_id", id);
 			patient = (Patient) query.getSingleResult();
 			transaction.commit();
@@ -64,7 +60,7 @@ public class PatientService {
 		List<Patient> patients = null;
 		try(Session session = HibernateUtil.getSessionFactory().openSession()){
 			transaction = session.beginTransaction();
-			Query query = session.createQuery(getPatientCountQuery);
+			Query query = session.getNamedQuery(Patient.PATIENT_ALL);
 			patients = query.getResultList();
 			transaction.commit();
 		}catch (Exception e) {

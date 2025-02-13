@@ -12,6 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.ListModel;
 import javax.swing.ListSelectionModel;
+import javax.swing.SwingUtilities;
 import javax.swing.event.ListDataListener;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -158,13 +159,19 @@ public class ViewResolver {
 	}
 
 	public static void refresh() {
-		for(int i=0; i<View.values().length; i++) {
-			View view = viewList.getModel().getElementAt(i);
-			IView content = (IView) view.getContent();
-			if(content != null) {
-				content.refresh();
+		SwingUtilities.invokeLater(new Runnable() {
+			
+			@Override
+			public void run() {
+				for(int i=0; i<View.values().length; i++) {
+					View view = viewList.getModel().getElementAt(i);
+					IView content = (IView) view.getContent();
+					if(content != null) {
+						content.refresh();
+					}
+				}
 			}
-		}
+		});
 	}
 
 }
